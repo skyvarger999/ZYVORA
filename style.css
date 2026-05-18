@@ -1,0 +1,332 @@
+/* ========================================
+   ZYVORA — Luxury Perfume E-Commerce
+   Custom Styles
+======================================== */
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FAF8F3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4AD51;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C9A440;
+}
+
+/* Selection */
+::selection {
+    background: #C9A440;
+    color: #0a0a0a;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    font-family: 'Cairo', sans-serif;
+}
+
+[dir="rtl"] .tracking-\[0\.2em\],
+[dir="rtl"] .tracking-\[0\.3em\],
+[dir="rtl"] .tracking-\[0\.15em\],
+[dir="rtl"] .tracking-\[0\.25em\],
+[dir="rtl"] .tracking-\[0\.4em\] {
+    letter-spacing: 0.05em;
+}
+
+[dir="rtl"] .font-playfair {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Navigation */
+#navbar {
+    background: transparent;
+}
+
+#navbar.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+#navbar.scrolled .nav-link,
+#navbar.scrolled #langSwitch,
+#navbar.scrolled #cartBtn,
+#navbar.scrolled #mobileMenuBtn {
+    color: #FAF8F3;
+}
+
+#navbar.scrolled .nav-link:hover,
+#navbar.scrolled #langSwitch:hover {
+    color: #C9A440;
+}
+
+/* Navbar on hero section - always light for navbar links on desktop */
+.nav-link {
+    color: #FAF8F3;
+}
+
+@media (min-width: 768px) {
+    #navbar:not(.scrolled) .nav-link {
+        color: #FAF8F3;
+    }
+}
+
+/* Hero Section */
+#home {
+    min-height: 100vh;
+}
+
+/* Animation Keyframes */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Fade Up Animation */
+.fade-up {
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(40px);
+}
+
+.fade-up.visible {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* Reveal Animations */
+.reveal-left {
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateX(-60px);
+}
+
+.reveal-left.visible {
+    opacity: 1 !important;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateX(60px);
+}
+
+.reveal-right.visible {
+    opacity: 1 !important;
+    transform: translateX(0);
+}
+
+.reveal-up {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(40px);
+}
+
+.reveal-up.visible {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* Product Card */
+.product-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-image {
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-overlay {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.add-to-cart-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201, 164, 64, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.add-to-cart-btn:hover::before {
+    left: 100%;
+}
+
+/* Cart Sidebar for RTL */
+[dir="rtl"] #cartSidebar {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+[dir="rtl"] #cartSidebar.open {
+    transform: translateX(0) !important;
+}
+
+/* Cart Item */
+.cart-item {
+    animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+[dir="rtl"] .cart-item {
+    animation: slideInRtl 0.3s ease forwards;
+}
+
+@keyframes slideInRtl {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Remove Button */
+.remove-btn {
+    transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+    color: #C9A440;
+    transform: rotate(90deg);
+}
+
+/* Quantity Buttons */
+.qty-btn {
+    transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+    color: #C9A440;
+}
+
+.qty-btn:active {
+    transform: scale(0.9);
+}
+
+/* Toast */
+#toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Contact Cards */
+#contact a::after {
+    content: '';
+    display: none;
+}
+
+/* Mobile Menu Animation */
+#mobileMenu {
+    transition: all 0.3s ease;
+}
+
+#mobileMenu.open {
+    display: block;
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+    #navbar .tracking-\[0\.3em\] {
+        letter-spacing: 0.15em;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Smooth link hover underline */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #C9A440;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+[dir="rtl"] .nav-link::after {
+    left: auto;
+    right: 0;
+}
+
+/* Product filter/price emphasis */
+.price-tag {
+    text-shadow: 0 0 20px rgba(201, 164, 64, 0.15);
+}
+
+/* Image loading placeholder */
+.product-image-wrapper {
+    background: #EDE5D3;
+}
