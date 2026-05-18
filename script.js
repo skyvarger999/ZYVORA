@@ -69,10 +69,10 @@ const translations = {
 const products = [
     {
         id: 1,
-        name_fr: "Oud Royal",
-        name_ar: "عود رويال",
+        name_fr: "dior sauvage",
+        name_ar: "ديور سوفاج",
         price: 450,
-        image: "http://static.photos/abstract/640x360/10",
+        image: "https://ibb.co/PvJ8V1yy",
         note_fr: "Bois · Épices · Ambre",
         note_ar: "خشب · بهارات · عنبر"
     },
