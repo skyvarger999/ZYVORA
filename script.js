@@ -72,7 +72,7 @@ const products = [
         name_fr: "dior sauvage",
         name_ar: "ديور سوفاج",
         price: 450,
-        image: "https://ibb.co/PvJ8V1yy",
+        image: "https://i.ibb.co/21RBpcrr/Picsart-26-05-18-21-48-23-444.png",
         note_fr: "Bois · Épices · Ambre",
         note_ar: "خشب · بهارات · عنبر"
     },
