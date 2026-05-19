@@ -72,7 +72,7 @@ const products = [
         name_fr: "Ambre Boisé",
         name_ar: "العنبر الخشبي",
         price: 150,
-        image: "https://i.ibb.co/NdFhL5qh/Chat-GPT-Image-May-19-2026-10-24-54-AM.png",
+        image: "https://i.ibb.co/HfVGyntn/Chat-GPT-Image-May-19-2026-07-00-14-PM.png",
         note_fr: "Bois de santal · Musc · Ambre",
         note_ar: "خشب الصندل · المسك · عنبر"
     },
