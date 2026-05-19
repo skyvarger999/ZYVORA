@@ -69,12 +69,12 @@ const translations = {
 const products = [
     {
         id: 1,
-        name_fr: "dior sauvage",
-        name_ar: "ديور سوفاج",
-        price: 450,
-        image: "https://i.imgur.com/Avg7BDK.jpeg",
-        note_fr: "Bois · Épices · Ambre",
-        note_ar: "خشب · بهارات · عنبر"
+        name_fr: "Ambre Boisé",
+        name_ar: "العنبر الخشبي",
+        price: 150,
+        image: "https://i.ibb.co/NdFhL5qh/Chat-GPT-Image-May-19-2026-10-24-54-AM.png",
+        note_fr: "Bois de santal · Musc · Ambre",
+        note_ar: "خشب الصندل · المسك · عنبر"
     },
     {
         id: 2,
